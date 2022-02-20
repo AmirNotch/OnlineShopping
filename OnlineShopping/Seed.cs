@@ -18,37 +18,55 @@ namespace OnlineShopping
                     {
                         Title = "Хлеб",
                         Cost = 150,
-                        Photo = "ce4cf9522d_1000"
+                        Photo = "bread-46"
                     },
                     new Product
                     {
                         Title = "Вода",
                         Cost = 200,
-                        Photo = "aa9e83ae8118b941efea31c3e78d9ed9"
+                        Photo = "Без названия (2)"
                     },
                     new Product
                     {
                         Title = "Курица",
                         Cost = 1500,
-                        Photo = "images"
+                        Photo = "e8605a0651d8c2092c2674ce194a933d"
                     },
                     new Product
                     {
                         Title = "Мясо",
                         Cost = 2100,
-                        Photo = "8879ec2496_500"
+                        Photo = "мясо-косшы-"
                     },
                     new Product
                     {
                         Title = "Масло",
                         Cost = 500,
-                        Photo = "2279418896660e618b9e"
+                        Photo = "istockphoto-149044379-170667a"
                     },
                     new Product
                     {
                         Title = "Батон",
                         Cost = 200,
-                        Photo = "w123dda"
+                        Photo = "images (1)"
+                    },
+                    new Product
+                    {
+                        Title = "Piko-Pulpy",
+                        Cost = 400,
+                        Photo = "Без названия (3)"
+                    },
+                    new Product
+                    {
+                        Title = "Snickers",
+                        Cost = 160,
+                        Photo = "snickers-chocolate-bar-50-g-0-20210312"
+                    },
+                    new Product
+                    {
+                        Title = "Kitkat",
+                        Cost = 220,
+                        Photo = "2544-01"
                     }
                 };
 
