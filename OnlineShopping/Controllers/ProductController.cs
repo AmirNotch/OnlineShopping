@@ -15,11 +15,17 @@ namespace OnlineShopping.Controllers
         {
             _mediator = mediator;
         }*/
-        
+
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
             return await Mediator.Send(new List.Query());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Paying([FromBody] List<Log> productsList)
+        {
+            return Ok();
         }
     }
 }
