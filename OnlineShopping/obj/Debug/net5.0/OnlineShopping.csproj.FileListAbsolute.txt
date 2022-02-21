@@ -63,3 +63,9 @@ C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\obj\Debug\net5.0\Onli
 C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\obj\Debug\net5.0\ref\OnlineShopping.dll
 C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\obj\Debug\net5.0\OnlineShopping.pdb
 C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\obj\Debug\net5.0\OnlineShopping.genruntimeconfig.cache
+C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\bin\Debug\net5.0\Application.dll
+C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\bin\Debug\net5.0\Domain.dll
+C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\bin\Debug\net5.0\Persistence.dll
+C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\bin\Debug\net5.0\Application.pdb
+C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\bin\Debug\net5.0\Domain.pdb
+C:\Users\ibrag\RiderProjects\OnlineShopping\OnlineShopping\bin\Debug\net5.0\Persistence.pdb

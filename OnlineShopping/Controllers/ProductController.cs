@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Application.Products;
+using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using OnlineShopping.Models;
-using OnlineShopping.Products;
+using Microsoft.VisualBasic;
 
 namespace OnlineShopping.Controllers
 {
@@ -25,7 +27,20 @@ namespace OnlineShopping.Controllers
         [HttpPost]
         public async Task<IActionResult> Paying([FromBody] List<Log> productsList)
         {
-            return Ok();
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\ibrag\RiderProjects\OnlineShopping\Persistence\NumberOfGoods.txt");
+            var numberOfGoods = Int32.Parse(lines[lines.Length - 1]); 
+            
+            foreach (var product in productsList)
+            {
+                product.Count = 1;
+                product.Payed = "Оплаченно";
+                product.StatusManager = "Ждёт выполнения";
+                product.NumberOfGood = numberOfGoods;
+            }
+            
+            System.IO.File.AppendAllText(@"C:\Users\ibrag\RiderProjects\OnlineShopping\Persistence\NumberOfGoods.txt", ++numberOfGoods + Environment.NewLine);
+            
+            return Ok(await Mediator.Send(new Create.Command {Logs = productsList}));
         }
     }
 }

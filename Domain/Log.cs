@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace OnlineShopping.Models
+namespace Domain
 {
     public class Log
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Title { get; set; }
         public int NumberOfGood { get; set; }
         public int Cost { get; set; }

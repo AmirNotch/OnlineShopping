@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using OnlineShopping.DbContext;
+using Persistence;
 
 namespace OnlineShopping.Services
 {
@@ -15,9 +15,10 @@ namespace OnlineShopping.Services
             _dataContext = dataContext;
         }
         
-        public async Task<List<Models.Product>> GetProducts()
+        public async Task<List<Product>> GetProducts()
         {
-            return await _dataContext.Products.OrderBy(x => x.Title).ToListAsync();
+            /*return await _dataContext.Products.OrderBy<Prod>(x => x.Title).ToListAsync();*/
+            return new List<Product>();
         }
     }
 }

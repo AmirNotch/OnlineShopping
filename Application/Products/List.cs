@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using OnlineShopping.DbContext;
-using OnlineShopping.Models;
+using Persistence;
 
-namespace OnlineShopping.Products
+
+namespace Application.Products
 {
     public class List
     {

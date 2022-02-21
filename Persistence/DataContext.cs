@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OnlineShopping.Models;
+﻿using Domain;
+using Microsoft.EntityFrameworkCore;
 
-namespace OnlineShopping.DbContext
+namespace Persistence
 {
-    public class DataContext : Microsoft.EntityFrameworkCore.DbContext
+    public class DataContext : DbContext
     {
         public DataContext(DbContextOptions options) : base(options)
         {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OnlineShopping.Models
+namespace Domain
 {
     public class Product
     {
