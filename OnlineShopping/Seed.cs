@@ -60,13 +60,15 @@ namespace OnlineShopping
                     {
                         Title = "Snickers",
                         Cost = 160,
-                        Photo = "snickers-chocolate-bar-50-g-0-20210312"
+                        Photo = "snickers-chocolate-bar-50-g-0-20210312",
+                        Address = "1"
                     },
                     new Product
                     {
                         Title = "Kitkat",
                         Cost = 220,
-                        Photo = "2544-01"
+                        Photo = "2544-01",
+                        Address = "1"
                     }
                 };
 
