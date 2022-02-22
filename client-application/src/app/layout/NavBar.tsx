@@ -25,7 +25,7 @@ export default function NavBar({product, setProducts}: Props) {
                     <Button onClick={() => {
                       setProducts([...product])
                     }
-                    }  positive content='Показать'/>    
+                    }  positive content='Показать товары в корзине'/>    
                 </Menu.Item>    
             </Container>
         </Menu>
