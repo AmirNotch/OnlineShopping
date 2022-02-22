@@ -26,10 +26,11 @@ function App() {
   }, [])
 
   if(localStorage.hasOwnProperty('products')){
-      
+
   } else {
     localStorage.setItem('products', JSON.stringify(products));
   }
+  
   
   
   function addedProductInGoods(product: Product){

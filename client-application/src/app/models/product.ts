@@ -4,7 +4,7 @@ export interface Product {
     cost: number;
     photo: string;
     address: string;
-    cardNumber: number;
+    cardNumber: string;
 }
 
 export interface ProductForPost {
@@ -30,4 +30,17 @@ export class ProductinBox {
     title: string = '';
     cost: number = 0;
     photo: string = '';
+}
+
+export interface ManagerLogs {
+    id: string;
+    title: string;
+    numberOfGood: number;
+    cost: number;
+    photo: string;
+    count: number;
+    address: string;
+    cardNumber: number;
+    payed: string;
+    statusManager: string;
 }

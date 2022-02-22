@@ -13,19 +13,19 @@ interface Props {
     // minusProduct: (product: Product) => void;
 }
 
-function handlePostLogs(product: Product[]) {
+// function handlePostLogs(product: Product[]) {
 
-    for(var i = 0; i < product.length; i++) {
-      product[i].address = 'Саина'
-      product[i].cardNumber = 9999999999999
-      }
+//     for(var i = 0; i < product.length; i++) {
+//       product[i].address = 'Саина'
+//       product[i].cardNumber = 9
+//       }
 
-    agent.Products.create(product).then(() => {
-      console.log(product)
-      console.log(product)
+//     agent.Products.create(product).then(() => {
+//       console.log(product)
+//       console.log(product)
 
-    })
-  }
+//     })
+//   }
 
 var TotalBox: Product[] = []
   

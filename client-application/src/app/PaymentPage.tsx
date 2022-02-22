@@ -26,7 +26,7 @@ function handlePostLogs(product: Product[]) {
 
     for(var i = 0; i < product.length; i++) {
       product[i].address = address
-      product[i].cardNumber = parseInt(CardNumber)
+      product[i].cardNumber = CardNumber
       }
 
     agent.Products.create(product).then(() => {
@@ -56,7 +56,7 @@ function handleInputChange1(event: ChangeEvent<HTMLInputElement>) {
 
     return(
         <Segment>
-            <Form onSubmit={adding}>
+            <Form onSubmit={adding} >
                 <Form.Input placeholder = 'Address' onChange={handleInputChange}/>
                 <Form.Input placeholder = 'CardNumber' onChange={handleInputChange1}/>
                 <Button positive type = 'submit' content = 'Подтвердить'/>

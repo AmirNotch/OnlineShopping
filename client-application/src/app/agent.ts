@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { Product } from "./models/product";
+import { Product, ManagerLogs } from "./models/product";
 
 axios.defaults.baseURL = 'http://localhost:5002/';
 
@@ -14,7 +14,9 @@ const requests = {
 
 const Products = {
     list: () => requests.get('/Product'),
-    create: (product: Product[]) => axios.post<void>('/Product', product)
+    create: (product: Product[]) => axios.post<void>('/Product', product),
+    listLogs: () => requests.get('/Manager'),
+    createLogs: (log: ManagerLogs) => axios.post<void>('/Manager', log)
 } 
 
 const agent = {
