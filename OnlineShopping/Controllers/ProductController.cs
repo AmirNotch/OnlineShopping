@@ -28,12 +28,12 @@ namespace OnlineShopping.Controllers
         public async Task<IActionResult> Paying([FromBody] List<Log> productsList)
         {
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\ibrag\RiderProjects\OnlineShopping\Persistence\NumberOfGoods.txt");
-            var numberOfGoods = Int32.Parse(lines[lines.Length - 1]); 
-            
+            var numberOfGoods = Int32.Parse(lines[lines.Length - 1]);
             foreach (var product in productsList)
             {
+                product.Id = new Guid();
                 product.Count = 1;
-                product.Payed = "Оплаченно";
+                product.Payed = "Оплачено";
                 product.StatusManager = "Ждёт выполнения";
                 product.NumberOfGood = numberOfGoods;
             }

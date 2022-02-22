@@ -1,10 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
     public class Log
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public int NumberOfGood { get; set; }
         public int Cost { get; set; }
