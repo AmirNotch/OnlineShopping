@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Domain;
@@ -32,7 +33,6 @@ namespace Application.Products
                     return Unit.Value;
                 }
                 
-
                 //var AllLogByNumberOfGood = await _context.Logs.Where(x => x.NumberOfGood == numberOfGood.NumberOfGood).ToListAsync();
 
                 foreach (var number in numberOfGood)
@@ -49,7 +49,29 @@ namespace Application.Products
 
                 //await _context.Logs.AddRangeAsync(numberOfGood);
                 await _context.SaveChangesAsync();
+
+                List<AllLog> allLogs = new List<AllLog>();
+                AllLog t1 = null;
+                foreach (var log in numberOfGood)
+                {
+                    t1 = new AllLog();
+                    t1.Id = log.Id;
+                    t1.Address = log.Address;
+                    t1.Cost = log.Cost;
+                    t1.Count = log.Count;
+                    t1.Payed = log.Payed;
+                    t1.Photo = log.Photo;
+                    t1.NumberOfGood = log.NumberOfGood;
+                    t1.StatusManager = log.StatusManager;
+                    t1.Title = log.Title;
+                    t1.CardNumber = log.CardNumber;
+                    allLogs.Add(t1);
+                }
                 
+                await _context.AllLogs.AddRangeAsync(allLogs);
+                
+                await _context.SaveChangesAsync();
+
                 return Unit.Value;
             }
         }

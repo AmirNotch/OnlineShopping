@@ -8,7 +8,6 @@ interface Props {
     setProducts: (product: Product[]) => void;
 }
 
-
 export default function NavBar({product, setProducts}: Props) {
 
     return(
@@ -18,7 +17,10 @@ export default function NavBar({product, setProducts}: Props) {
                     <img src="/assets/Logo_of_Kaspi_bank.png" alt="logo" style={{marginRight: '10px'}}/>
                     Kaspi Products
                 </Menu.Item>
-                  <Menu.Item as={NavLink} to='/manager' name='ManagerPage'/>
+                  <Menu.Item as={NavLink} to='/manager' name='Страница Менеджера'/>
+                <Menu.Item>
+                </Menu.Item>
+                  <Menu.Item as={NavLink} to='/listOfHistory' name='История всех изменений'/>
                 <Menu.Item>
                     <Button onClick={() => {
                       setProducts([...product])

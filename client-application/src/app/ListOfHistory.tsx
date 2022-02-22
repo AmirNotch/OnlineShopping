@@ -3,43 +3,29 @@ import { Accordion, Button, Container, Icon, Menu, Table,Image } from "semantic-
 import agent from "./agent";
 import { ManagerLogs } from "./models/product";
 
-export default function ManagerPage() {
+export default function ListOfHistory() {
   const [Logs, setLogs] = useState<ManagerLogs[]>([]);
   
   useEffect(() => {
-    agent.Products.listLogs().then(response => {
+    agent.Products.listLogsOfHistory().then(response => {
         setLogs(response);
     })
     console.log(Logs)
   }, [])
-  
-  var Total: ManagerLogs
-
-  function posting(log: ManagerLogs) {
-    Total = log;
-    PostLog(Total)
-  }
-
-  function PostLog(log: ManagerLogs) {
-
-    agent.Products.createLogs(log).then(() => {
-        
-    })
-  }
 
     return(
-  <Table>
-    <Table.Header>
-    <Table.HeaderCell>Товар</Table.HeaderCell>
-        <Table.HeaderCell>Заказ №</Table.HeaderCell>
-        <Table.HeaderCell>Стоимость</Table.HeaderCell>
-        <Table.HeaderCell>Картинка</Table.HeaderCell>
-        <Table.HeaderCell>Количества</Table.HeaderCell>
-        <Table.HeaderCell>Адресс</Table.HeaderCell>
-        <Table.HeaderCell>Карта</Table.HeaderCell>
-        <Table.HeaderCell>Оплачено</Table.HeaderCell>
-        <Table.HeaderCell>Состояние</Table.HeaderCell>
-    </Table.Header>
+        <Table>
+          <Table.Header>
+          <Table.HeaderCell>Товар</Table.HeaderCell>
+              <Table.HeaderCell>Заказ №</Table.HeaderCell>
+              <Table.HeaderCell>Стоимость</Table.HeaderCell>
+              <Table.HeaderCell>Картинка</Table.HeaderCell>
+              <Table.HeaderCell>Количества</Table.HeaderCell>
+              <Table.HeaderCell>Адресс</Table.HeaderCell>
+              <Table.HeaderCell>Карта</Table.HeaderCell>
+              <Table.HeaderCell>Оплачено</Table.HeaderCell>
+              <Table.HeaderCell>Состояние</Table.HeaderCell>
+          </Table.Header>
     <Accordion
         fluid={true}
         as={Table.Body}
@@ -63,9 +49,7 @@ export default function ManagerPage() {
                         <Table.Cell key={`${n.id}_type`}>{n.address}</Table.Cell>,
                         <Table.Cell key={`${n.id}_type`}>{n.cardNumber}</Table.Cell>,
                         <Table.Cell style={{color: "green"}} key={`${n.id}_type`}>{n.payed}</Table.Cell>,
-                        <Button onClick={() => posting(n)} positive content ='Create Activity' >
-                        {n.statusManager}
-                        </Button>
+                        <Table.Cell style={{color: "green"}} key={`${n.id}_type`}>{n.statusManager}</Table.Cell>,
                         // <Table.Cell key={`${n.id}_type`}>{n.statusManager}</Table.Cell>,
                     ]
                 },

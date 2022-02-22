@@ -12,5 +12,6 @@ namespace Persistence
         
         public DbSet<Product> Products { get; set; }
         public DbSet<Log> Logs { get; set; }
+        public DbSet<AllLog> AllLogs { get; set; }
     }
 }

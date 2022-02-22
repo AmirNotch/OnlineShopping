@@ -9,15 +9,9 @@ namespace OnlineShopping.Controllers
     public class ManagerController : BaseApiController
     {
         [HttpGet]
-        public async Task<ActionResult<List<Log>>> GetLogs()
-        {
-            return await Mediator.Send(new ListLogs.Query());
-        }
+        public async Task<ActionResult<List<Log>>> GetLogs() => await Mediator.Send(new ListLogs.Query());
 
         [HttpPost]
-        public async Task<IActionResult> Done([FromBody] Log log)
-        {
-            return Ok(await Mediator.Send(new Edit.Command {Log = log}));
-        }
+        public async Task<IActionResult> Done([FromBody] Log log) => Ok(await Mediator.Send(new Edit.Command {Log = log}));
     }
 }

@@ -16,7 +16,8 @@ const Products = {
     list: () => requests.get('/Product'),
     create: (product: Product[]) => axios.post<void>('/Product', product),
     listLogs: () => requests.get('/Manager'),
-    createLogs: (log: ManagerLogs) => axios.post<void>('/Manager', log)
+    createLogs: (log: ManagerLogs) => axios.post<void>('/Manager', log),
+    listLogsOfHistory: () => requests.get('/History'),
 } 
 
 const agent = {
